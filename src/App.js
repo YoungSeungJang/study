@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Memoization from 'Pages/Memoization/memoization';
+import DependencyInjection from 'Pages/customHook';
+import StateOptimize from 'Pages/stateOptimize/stateOptimize';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<StateOptimize />
+			<hr />
+			<Memoization />
+			<hr />
+			<div>customHook을 이용한 의존성 주입</div>
+			<DependencyInjection />
+		</div>
+	);
 }
 
 export default App;
